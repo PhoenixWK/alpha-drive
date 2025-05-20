@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Sidebar from "@/components/sidebars/Sidebar";
 
-export default function Home() {
+export default function SharedPage() {
   return (
     <div className="bg-white dark:bg-[#171725] flex flex-row h-screen">
       <Sidebar />
@@ -10,7 +10,7 @@ export default function Home() {
           <Header />
         </div>       
         <main className="flex flex-col h-screen px-6">     
-          Home
+          Shared page
         </main>
       </div>
     </div>

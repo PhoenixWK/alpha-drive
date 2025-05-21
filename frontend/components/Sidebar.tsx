@@ -5,14 +5,14 @@ import { usePathname } from "next/navigation";
 import localFont from "next/font/local";
 import Image from "next/image";
 
-import SwitchThemeBtn from "../SwitchThemeBtn";
+import SwitchThemeBtn from "./SwitchThemeBtn";
 import { BiSolidDashboard } from "react-icons/bi";
 import { IoMdShare } from "react-icons/io";
 import { FaRegStar } from "react-icons/fa";
 import { RiDeleteBin6Line } from "react-icons/ri";
 
 const righteousFont = localFont({
-    src: "../../public/fonts/Righteous-Regular.ttf",
+    src: "../public/fonts/Righteous-Regular.ttf",
 });
 
 export default function Sidebar() {
@@ -20,7 +20,7 @@ export default function Sidebar() {
     const pathname = usePathname();
 
     return (
-        <div className="w-64 h-full bg-[#F8F6FF] dark:bg-[#1B1A30] px-6 py-8 flex flex-col items-center justify-between">
+        <aside className="w-64 h-full bg-[#F8F6FF] dark:bg-[#1B1A30] px-6 py-8 xl:flex flex-col items-center justify-between">
             <div className="space-y-10">
                 <div className="flex flex-row items-center justify-center gap-4">
                     <Image 
@@ -76,7 +76,9 @@ export default function Sidebar() {
                     </Link>
                 </nav>
             </div>
-            <SwitchThemeBtn />
-        </div>
+            <div className="hidden xl:block">
+                <SwitchThemeBtn />
+            </div>
+        </aside>
     );
 }   
